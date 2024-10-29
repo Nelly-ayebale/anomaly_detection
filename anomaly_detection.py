@@ -18,7 +18,7 @@ def generate_data_stream(data_points=1000, time_window=50, random_noise_level=0.
     for i in range(data_points):
         regular_pattern = np.sin(2*np.pi * i / time_window) #this creates a sine wave, with a repeating full cycle for each data point over the total time period that is set 
         noise = np.random.normal(0, random_noise_level) #this adds the random noise
-        value = regular_pattern + random_noise_level #creating a total value that takes in the regular pattern + the random noise to create data points that follow a trend but with randomness
+        value = regular_pattern + noise #creating a total value that takes in the regular pattern + the random noise to create data points that follow a trend but with randomness
         data_list.append(value) #appending the value as a data point in the data_list
 
         #adding anomalies
