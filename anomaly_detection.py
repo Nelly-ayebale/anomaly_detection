@@ -1,4 +1,4 @@
-# Starting point:
+# This is the BRUTE FORCE APPROACH of the problem:
 # Initialize an empty list that is going to be responsible for the data stream
 # - for each new entry of a data point in the stream, I will:
 # ---add that data point to the data stream
