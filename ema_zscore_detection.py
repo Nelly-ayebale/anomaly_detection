@@ -4,6 +4,11 @@ import matplotlib.pyplot as pt
 from statsmodels.tsa.seasonal import seasonal_decompose
 import time
 
+#I decided to optimize the zscore method by incorporating exponential moving averages (EMA) to give more weight to the most recent data
+#However, since my algorithm was partially overlooking seasonal patterns, I added a seasonal pattern function and used panda series to decompose the data
+#This way I will be able to filter out for seasonal patterns more accurately, and focus on the actual anomalies that are happening.
+#I believe this can be further enhanced by adding dynamic thresholding and other features which I am further thinking about for further modification.
+
 class DataStreamSimulator:
     def __init__(self,base_value=50,seasonal_variation=10,noise_level=5):
         """a constructor method that initializes the instance of the class default parameters:"""
